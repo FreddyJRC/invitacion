@@ -17,7 +17,7 @@ export default function AppTemplate() {
   return (
     <Disclosure as="nav" className="bg-olive-400">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
+        <div className="relative flex h-16 sm:h-auto items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-olive-dark hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
@@ -27,16 +27,12 @@ export default function AppTemplate() {
               <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
             </DisclosureButton>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start text-olive-dark font-serif text-2xl">
-            <div className="flex shrink-0 items-center">
-              {/* <img
-                alt="Your Company"
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
-              /> */}
-              K & F
+          <div className="flex flex-1 sm:flex-col items-center justify-center text-olive-dark font-serif text-2xl sm:text-3xl">
+            <div className="flex shrink-0 items-center sm:py-8">
+              <div className='sm:hidden'>K & F</div>
+              <div className='hidden sm:block'>Kirsten & Freddy</div>
             </div>
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden sm:ml-6 sm:block sm:py-4">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
                   <a
@@ -44,8 +40,8 @@ export default function AppTemplate() {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium',
+                      item.current ? 'border-b-2 border-olive-dark text-olive-dark' : 'hover:border-b-2 hover:border-olive',
+                      'rounded-none px-3 py-2 text-sm font-medium',
                     )}
                   >
                     {item.name}
@@ -67,7 +63,7 @@ export default function AppTemplate() {
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
                 item.current ? 'border-b-2 border-olive-dark' : 'hover:bg-gray-700 hover:text-white',
-                'flex shrink-0 items-center rounded-md px-3 py-1 my-5 font-medium rounded-none',
+                'flex shrink-0 items-center px-3 py-1 my-5 font-medium rounded-none',
               )}
             >
               {item.name}
