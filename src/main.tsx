@@ -2,12 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createHashRouter, RouterProvider } from 'react-router'
 import './index.css'
-import App from './App.tsx'
+import Home from './pages/home.tsx'
 
 const router = createHashRouter([
   {
-    path: '/',
-    element: <App />
+    Component: Home,
+    index: true
   }
 ])
 

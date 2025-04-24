@@ -13,9 +13,9 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function AppTemplate() {
+export default function Menu() {
   return (
-    <Disclosure as="nav" className="bg-olive-400">
+    <Disclosure as="nav" className="bg-olive-50">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 sm:h-auto items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -27,7 +27,7 @@ export default function AppTemplate() {
               <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
             </DisclosureButton>
           </div>
-          <div className="flex flex-1 sm:flex-col items-center justify-center text-olive-dark font-serif text-2xl sm:text-3xl">
+          <div className="flex flex-1 sm:flex-col items-center justify-center text-olive-dark font-serif text-2xl sm:text-6xl">
             <div className="flex shrink-0 items-center sm:py-8">
               <div className='sm:hidden'>K & F</div>
               <div className='hidden sm:block'>Kirsten & Freddy</div>
