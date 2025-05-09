@@ -2,19 +2,20 @@ import { NavLink } from 'react-router'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Photos', href: '#', current: false },
-  { name: 'Gift List', href: '#', current: false },
-  { name: 'Q & A', href: '#', current: false },
-  { name: 'RSVP', href: '/rsvp', current: false },
-]
-
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Menu() {
+export default function Menu({name}: {name: string}) {
+
+  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'Photos', href: '#', current: false },
+    { name: 'Gift List', href: '#', current: false },
+    { name: 'Q & A', href: '#', current: false },
+    { name: 'RSVP', href: '/rsvp', current: false },
+  ]
+
   return (
     <Disclosure as="nav" className="bg-olive-50">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -39,9 +40,9 @@ export default function Menu() {
                   <NavLink
                     key={item.name}
                     to={item.href}
-                    aria-current={item.current ? 'page' : undefined}
+                    aria-current={item.name === name ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'border-b-2 border-olive-dark text-olive-dark' : 'hover:border-b-2 hover:border-olive',
+                      item.name === name ? 'border-b-2 border-olive-dark text-olive-dark' : 'hover:border-b-2 hover:border-olive',
                       'rounded-none px-3 py-2 text-sm font-medium',
                     )}
                   >
@@ -61,9 +62,9 @@ export default function Menu() {
               key={item.name}
               as={NavLink}
               to={item.href}
-              aria-current={item.current ? 'page' : undefined}
+              aria-current={item.name === name ? 'page' : undefined}
               className={classNames(
-                item.current ? 'border-b-2 border-olive-dark' : 'hover:bg-gray-700 hover:text-white',
+                item.name === name ? 'border-b-2 border-olive-dark' : 'hover:bg-gray-700 hover:text-white',
                 'flex shrink-0 items-center px-3 py-1 my-5 font-medium rounded-none',
               )}
             >
