@@ -1,12 +1,13 @@
+import { NavLink } from 'react-router'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
+  { name: 'Home', href: '/', current: true },
   { name: 'Photos', href: '#', current: false },
   { name: 'Gift List', href: '#', current: false },
   { name: 'Q & A', href: '#', current: false },
-  { name: 'RSVP', href: '#', current: false },
+  { name: 'RSVP', href: '/rsvp', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -35,9 +36,9 @@ export default function Menu() {
             <div className="hidden sm:ml-6 sm:block sm:py-4">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <NavLink
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.current ? 'border-b-2 border-olive-dark text-olive-dark' : 'hover:border-b-2 hover:border-olive',
@@ -45,7 +46,7 @@ export default function Menu() {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </NavLink>
                 ))}
               </div>
             </div>
@@ -58,8 +59,8 @@ export default function Menu() {
           {navigation.map((item) => (
             <DisclosureButton
               key={item.name}
-              as="a"
-              href={item.href}
+              as={NavLink}
+              to={item.href}
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
                 item.current ? 'border-b-2 border-olive-dark' : 'hover:bg-gray-700 hover:text-white',

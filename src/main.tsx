@@ -8,7 +8,7 @@ import RSVP from './pages/rsvp.tsx'
 const router = createHashRouter([
   {
     Component: Home,
-    index: true
+    path: "/"
   },
   {
     Component: RSVP,
