@@ -4,6 +4,8 @@ import { createHashRouter, RouterProvider } from 'react-router'
 import './index.css'
 import Home from './pages/home.tsx'
 import RSVP from './pages/rsvp.tsx'
+import Regalos from './pages/regalos.tsx'
+import Galeria from './pages/galeria.tsx'
 
 const router = createHashRouter([
   {
@@ -13,6 +15,14 @@ const router = createHashRouter([
   {
     Component: RSVP,
     path: "rsvp"
+  },
+  {
+    Component: Regalos,
+    path: "regalos"
+  },
+  {
+    Component: Galeria,
+    path: "galeria"
   }
 ])
 

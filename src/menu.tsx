@@ -10,8 +10,8 @@ export default function Menu({name}: {name: string}) {
 
   const navigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Photos', href: '#', current: false },
-    { name: 'Gift List', href: '#', current: false },
+    { name: 'Photos', href: '/galeria', current: false },
+    { name: 'Gift List', href: '/regalos', current: false },
     { name: 'Q & A', href: '#', current: false },
     { name: 'RSVP', href: '/rsvp', current: false },
   ]
