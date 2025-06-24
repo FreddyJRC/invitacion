@@ -9,12 +9,14 @@ export default function Home() {
   return (
     <>
       <Menu name='Home' />
-      <div className="columns-xs columns-2 justify-center text-olive-dark">
-        <img
-          src={Hero}
-          className="md:px-6 md:py-2"
-        />
-        <div className='flex flex-1 flex-col items-center'>
+      <div className="flex flex-col sm:flex-row justify-center content-center text-olive-dark mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div className='basis-1/2 justify-items-center'>
+          <img
+            src={Hero}
+            className="md:px-6 md:py-2 max-h-175"
+          />
+        </div>
+        <div className='basis-1/2 flex flex-col items-center'>
           <h1 className="font-serif text-4xl sm:text-5xl text-center pt-8">
             Boda <br /> Ramirez Schmidt
           </h1>

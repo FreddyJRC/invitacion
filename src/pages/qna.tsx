@@ -6,7 +6,7 @@ export default function QNA() {
   return (
     <>
       <Menu name="Q & A" />
-    <div className="flex flex-1 flex-col sm:mx-40 text-olive-dark px-6 sm:px-0">
+      <div className="flex flex-1 flex-col sm:mx-40 text-olive-dark mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <h2 className="font-serif group relative pt-10 pb-4 text-center text-4xl">
             ¿Hasta cuándo puedo confirmar mi asistencia?
         </h2>
@@ -14,7 +14,7 @@ export default function QNA() {
             Te agradeceríamos que fuera lo antes posible, la última fecha para confirmar tu asistencia es el <span className="font-bold">15 de Julio.</span>
         </p>
 
-        <hr className="mx-40"/>
+        <hr className="mx-20 sm:mx-40"/>
         
         <h2 className="font-serif group relative pt-10 pb-4 text-center text-4xl">
             ¿Se permite el ingreso de niños?
@@ -25,7 +25,7 @@ export default function QNA() {
             <span className="font-bold">Por lo que lamentablemente no podrán acompañarnos.</span>
         </p>
         
-        <hr className="mx-40"/>
+        <hr className="mx-20 sm:mx-40"/>
         
         <h2 className="font-serif group relative pt-10 pb-4 text-center text-4xl">
             ¿Cuál es el código de vestimenta?
@@ -37,7 +37,7 @@ export default function QNA() {
             Si no tienes idea de que es etiqueta formal acá te dejamos algunas referencias para que te inspires:
         </p>
         
-        <hr className="mx-40"/>
+        <hr className="mx-20 sm:mx-40"/>
         
         <h2 className="font-serif group relative pt-10 pb-4 text-center text-4xl">
             ¿Puedo llevar un regalo físico para la celebración?
