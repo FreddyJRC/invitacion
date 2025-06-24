@@ -1,5 +1,5 @@
 import Menu from "../menu"
-import { Link } from 'react-router'
+// import { Link } from 'react-router'
 
 export default function QNA() {
 
