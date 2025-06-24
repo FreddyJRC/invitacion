@@ -6,7 +6,7 @@ export default function QNA() {
   return (
     <>
       <Menu name="Q & A" />
-      <div className="flex flex-1 flex-col sm:mx-40 text-olive-dark mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
+      <div className="flex flex-1 flex-col text-olive-dark mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <h2 className="font-serif group relative pt-10 pb-4 text-center text-4xl">
             ¿Hasta cuándo puedo confirmar mi asistencia?
         </h2>
