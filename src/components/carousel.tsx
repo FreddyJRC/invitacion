@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 
 const Carousel = ({ images, autoSlide = true, autoSlideInterval = 3000 }: { images:string[], autoSlide?:boolean, autoSlideInterval?:number }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,7 +23,7 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 3000 }: { imag
 
   return (
     <div className="relative w-full max-w-3xl mx-auto">
-      <div className="overflow-hidden relative h-64">
+      <div className="overflow-hidden relative h-98 sm:h-190">
         {images.map((image, index) => (
           <div
             key={index}
@@ -38,13 +39,13 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 3000 }: { imag
         className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2"
         onClick={prevSlide}
       >
-        Prev
+        <ChevronLeftIcon aria-hidden="true" className="block size-6" />
       </button>
       <button
         className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2"
         onClick={nextSlide}
       >
-        Next
+        <ChevronRightIcon aria-hidden="true" className="block size-6" />
       </button>
       <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-4">
         {images.map((_, index) => (
