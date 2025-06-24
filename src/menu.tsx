@@ -12,7 +12,7 @@ export default function Menu({name}: {name: string}) {
     { name: 'Home', href: '/', current: true },
     { name: 'Photos', href: '/galeria', current: false },
     { name: 'Gift List', href: '/regalos', current: false },
-    { name: 'Q & A', href: '#', current: false },
+    { name: 'Q & A', href: '/q-n-a', current: false },
     { name: 'RSVP', href: '/rsvp', current: false },
   ]
 

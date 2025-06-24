@@ -6,6 +6,7 @@ import Home from './pages/home.tsx'
 import RSVP from './pages/rsvp.tsx'
 import Regalos from './pages/regalos.tsx'
 import Galeria from './pages/galeria.tsx'
+import QNA from './pages/qna.tsx'
 
 const router = createHashRouter([
   {
@@ -23,6 +24,10 @@ const router = createHashRouter([
   {
     Component: Galeria,
     path: "galeria"
+  },
+  {
+    Component: QNA,
+    path: "q-n-a"
   }
 ])
 
