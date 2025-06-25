@@ -1,5 +1,5 @@
 import Menu from "../menu"
-// import { Link } from 'react-router'
+import { Link } from 'react-router'
 
 export default function QNA() {
 
@@ -35,6 +35,10 @@ export default function QNA() {
         </p>
         <p className="font-serif group relative pb-8 text-lg sm:text-xl text-justify">
             Si no tienes idea de que es etiqueta formal acá te dejamos algunas referencias para que te inspires:
+            <ul className="list-disc list-inside">
+                <li><Link className="underline" to="https://pin.it/7inJ3Itut">https://pin.it/7inJ3Itut</Link></li>
+                <li><Link className="underline" to="https://pin.it/1V0JeaF22">https://pin.it/1V0JeaF22</Link></li>
+            </ul>
         </p>
         
         <hr className="mx-20 sm:mx-40"/>
