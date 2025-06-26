@@ -38,6 +38,7 @@ export default function QNA() {
             <ul className="list-disc list-inside">
                 <li><Link className="underline" to="https://pin.it/7inJ3Itut">https://pin.it/7inJ3Itut</Link></li>
                 <li><Link className="underline" to="https://pin.it/1V0JeaF22">https://pin.it/1V0JeaF22</Link></li>
+                <li><Link className="underline" to="https://vm.tiktok.com/ZMS97avaH/">https://vm.tiktok.com/ZMS97avaH/</Link></li>
             </ul>
         </p>
         
