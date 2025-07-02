@@ -1,4 +1,4 @@
-import { CalendarIcon, MapPinIcon, HomeIcon, MusicalNoteIcon } from '@heroicons/react/24/outline'
+import { CalendarIcon, MapPinIcon, HomeIcon, MusicalNoteIcon, ClockIcon } from '@heroicons/react/24/outline'
 
 import Menu from "../menu"
 import Hero from "../assets/hero.jpg"
@@ -8,10 +8,29 @@ import { Link } from 'react-router'
 function Place() {
   return (
     <>
+      <h2 className="font-serif group relative pt-6 pb-4 text-center text-3xl text-bold">
+        ~ Misa ~
+      </h2>
       <p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
-        <HomeIcon aria-hidden="true" className="block size-6 mr-3" /> Yurrita @ 4pm
-      </p><p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
-        <MusicalNoteIcon aria-hidden="true" className="block size-6 mr-3" /> Teatro Abril @ 6pm
+        <HomeIcon aria-hidden="true" className="block size-6 mr-3" /> Nuestra Señora de las Angustias Yurrita
+      </p>
+      <p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
+        <ClockIcon aria-hidden="true" className="block size-6 mr-3" /> 3:30 PM
+      </p>
+      <p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
+        <MapPinIcon aria-hidden="true" className="block size-6 mr-3" /> Casa Yurrita, 8-52 Ruta 6, Zona 4
+      </p>
+      <h2 className="font-serif group relative pt-6 pb-4 text-center text-3xl text-bold">
+        ~ Recepción ~
+      </h2>
+      <p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
+        <MusicalNoteIcon aria-hidden="true" className="block size-6 mr-3" /> Teatro Abril
+      </p>
+      <p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
+        <ClockIcon aria-hidden="true" className="block size-6 mr-3" /> 6:30 PM
+      </p>
+      <p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
+        <MapPinIcon aria-hidden="true" className="block size-6 mr-3" /> 9A Avenida 14-22, Zona 1
       </p>
     </>
   )
