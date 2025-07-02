@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useEffect } from 'react'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -15,6 +16,14 @@ export default function Menu({name}: {name: string}) {
     { name: 'Q & A', href: '/invitacion/q-n-a', current: false },
     { name: 'RSVP', href: '/invitacion/rsvp', current: false },
   ]
+
+  useEffect(() => {
+    let query = new URLSearchParams(window.location.search);
+    let p = query.get("p")
+    if(p !== null) localStorage.setItem("p", p!);
+    let c = query.get("c")
+    if (c !== null) localStorage.setItem("c", c!);
+  }, [])
 
   return (
     <Disclosure as="nav" className="bg-olive-50">

@@ -36,10 +36,21 @@ export default function Home() {
           <p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
             <MapPinIcon aria-hidden="true" className="block size-6 mr-3" /> Guateamala, Guatemala
           </p>
-          <Link
-            to="/invitacion/rsvp"
-            className='px-4 py-2 mb-10 bg-olive text-white'
-          >Confirma tu asistencia</Link>
+          {
+            (localStorage.getItem("c") === "1") ? 
+              <>
+                <p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
+                  <MapPinIcon aria-hidden="true" className="block size-6 mr-3" /> Yurrita @ 4pm
+                </p><p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
+                  <MapPinIcon aria-hidden="true" className="block size-6 mr-3" /> Teatro Abril @ 6pm
+                </p>
+              </>
+            : 
+              <Link
+                to="/invitacion/rsvp"
+                className='px-4 py-2 mb-10 bg-olive text-white'
+              >Confirma tu asistencia</Link>
+          }
         </div>
       </div>
     </>
