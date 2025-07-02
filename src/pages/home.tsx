@@ -1,9 +1,21 @@
-import { CalendarIcon, MapPinIcon } from '@heroicons/react/24/outline'
+import { CalendarIcon, MapPinIcon, HomeIcon, MusicalNoteIcon } from '@heroicons/react/24/outline'
 
 import Menu from "../menu"
 import Hero from "../assets/hero.jpg"
 import lavander from "../assets/lavender.png"
 import { Link } from 'react-router'
+
+function Place() {
+  return (
+    <>
+      <p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
+        <HomeIcon aria-hidden="true" className="block size-6 mr-3" /> Yurrita @ 4pm
+      </p><p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
+        <MusicalNoteIcon aria-hidden="true" className="block size-6 mr-3" /> Teatro Abril @ 6pm
+      </p>
+    </>
+  )
+}
 
 export default function Home() {
   return (
@@ -38,13 +50,7 @@ export default function Home() {
           </p>
           {
             (localStorage.getItem("c") === "1") ? 
-              <>
-                <p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
-                  <MapPinIcon aria-hidden="true" className="block size-6 mr-3" /> Yurrita @ 4pm
-                </p><p className="font-serif group relative inline-flex items-center justify-center pb-3 text-lg sm:text-xl">
-                  <MapPinIcon aria-hidden="true" className="block size-6 mr-3" /> Teatro Abril @ 6pm
-                </p>
-              </>
+              <Place />
             : 
               <Link
                 to="/invitacion/rsvp"

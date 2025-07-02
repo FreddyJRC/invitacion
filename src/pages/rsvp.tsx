@@ -11,13 +11,14 @@ type Values = {
 export default function Rsvp() {
   let navigate = useNavigate();
 
-  const [values,setValues] = useState<Values>({
+  const [values, setValues] = useState<Values>({
     name : "",
     assistance : "",
     number : "1",
   });
 
   const [submiting, setSubmiting] = useState(false);
+  const [onNo, setOnNo] = useState(false);
 
   const handleChange = (event : React.ChangeEvent<HTMLInputElement>) => {
     setValues({...values,[event.target.name] : event.target.value});
@@ -32,14 +33,16 @@ export default function Rsvp() {
     url.searchParams.append("number", values.number);
 
     await fetch(url.toString(), { method: "POST" });
-    localStorage.setItem("c", "1");
-    console.log("sent")
-    navigate({
-      pathname: "/invitacion",
-      search: "?c=1"
-    }, {
-      replace: true
-    })
+    if (values.assistance === "si") {
+      localStorage.setItem("c", "1");
+      navigate({
+        pathname: "/invitacion"
+      }, {
+        replace: true
+      })
+    } else {
+      setOnNo(true);
+    }
   }
 
   return (
@@ -90,10 +93,18 @@ export default function Rsvp() {
               type="submit" 
               value="confirmar" 
               disabled={submiting}
-              className='px-4 py-2 mb-10 bg-olive text-white w-full' />
+              className='px-4 py-2 mb-10 bg-olive text-white w-full hover:bg-olive-dark disabled:bg-olive-500' />
           </div>
         </div>
       </form>
+      {(onNo) && <div className="flex flex-1 flex-col text-olive-dark mx-auto max-w-xl px-8 sm:px-6 lg:px-8">
+        <h2 className="font-serif group relative pt-10 pb-4 text-center text-4xl">
+            ¡Gracias!
+        </h2>
+        <p className="font-serif group relative pb-8 text-lg sm:text-xl text-justify">
+            Nos llena de tristeza no poder contar contigo en este día tan especial, agradecemos mucho que te hayas tomado el tiempo para hacérnoslo saber
+        </p>
+      </div>}
     </>
   )
 }
