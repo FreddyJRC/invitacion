@@ -9,11 +9,11 @@ function classNames(...classes: string[]) {
 export default function Menu({name}: {name: string}) {
 
   const navigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'Photos', href: '/galeria', current: false },
-    { name: 'Gift List', href: '/regalos', current: false },
-    { name: 'Q & A', href: '/q-n-a', current: false },
-    { name: 'RSVP', href: '/rsvp', current: false },
+    { name: 'Home', href: '/invitacion/', current: true },
+    { name: 'Photos', href: '/invitacion/galeria', current: false },
+    { name: 'Gift List', href: '/invitacion/regalos', current: false },
+    { name: 'Q & A', href: '/invitacion/q-n-a', current: false },
+    { name: 'RSVP', href: '/invitacion/rsvp', current: false },
   ]
 
   return (

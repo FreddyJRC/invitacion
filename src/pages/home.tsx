@@ -37,7 +37,7 @@ export default function Home() {
             <MapPinIcon aria-hidden="true" className="block size-6 mr-3" /> Guateamala, Guatemala
           </p>
           <Link
-            to="rsvp"
+            to="/invitacion/rsvp"
             className='px-4 py-2 mb-10 bg-olive text-white'
           >Confirma tu asistencia</Link>
         </div>
